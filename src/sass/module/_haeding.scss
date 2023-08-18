@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.heading {
+  font-size: rem(30);
+  font-weight: $semibold;
+  line-height: calc(37 / 30);
+  text-align: center;
+  text-transform: capitalize;
+    @include mq("md") {
+      font-size:  rem(36);
+    }
+}
+
+.heading.service-items__heading {
+  color: $white;
+}

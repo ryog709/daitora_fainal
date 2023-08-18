@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.header {
+  height: rem(68);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: $white;
+
+  @include mq("md") {
+    height: rem(83);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.header__inner {
+  height: inherit;
+}
+
+.header__logo {
+  height: inherit;
+  font-size: rem(23);
+  font-weight: $semibold;
+  display: flex;
+  align-items: center;
+}

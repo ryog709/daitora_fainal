@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.monotone-button {
+  display: inline-block;
+  font-size: rem(18);
+  font-weight: $semibold;
+  line-height: calc(22.5 / 18);
+  padding: rem(14.8) 1em;
+  background-color: $white;
+  border:  rem(1) solid $Gray2;
+  letter-spacing:  0.2em;
+  color: $black;
+  max-width: rem(268);
+  width: 100%;
+  text-align: center;
+  @include mq("md") {
+    max-width: rem(236);
+    width: 100%;
+    font-size:  rem(20);
+    padding: rem(18.5) 1em;
+    }
+}

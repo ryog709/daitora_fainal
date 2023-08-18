@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.service-items {
+  padding: 0 0 rem(40) 0;
+  box-shadow: 0px 5px 12px #3e3e3e33;
+  background-color: $white;
+  @include mq("md") {
+    padding: rem(60) 0;
+    display: flex;
+    max-width: rem(960);
+    width: 100%;
+  }
+}
+
+.service__items {
+  margin-top: rem(40);
+  margin-inline: auto;
+  @include mq("md") {
+    margin-top: rem(58);
+  }
+}

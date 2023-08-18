@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.primary-button {
+  display: inline-block;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(24 / 16);
+  padding: rem(12) 1em;
+  background-color: $orange;
+  box-shadow: 0px 3px 5px #3e3e3e33;
+  border-radius: 10px;
+  color: $white;
+  max-width: rem(222);
+  width: 100%;
+  text-align: center;
+  @include mq("md") {
+    max-width: rem(282);
+    width: 100%;
+    font-size:  rem(18);
+    padding: rem(11.5) 1em;
+    }
+}

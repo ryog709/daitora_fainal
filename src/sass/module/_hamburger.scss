@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.hamburger {
+  position: fixed;
+  z-index: 9999;
+  top: rem(20);
+  right: rem(16);
+  width: rem(22);
+  height: rem(20);
+  cursor: pointer;
+  color: $black;
+  transition: all 0.7s ease 0s;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: rem(4);
+  transition: transform 0.3s;
+  background-color: $black;
+}
+
+.hamburger.is-current {
+  right: 15px;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+  transition: opacity 0.3s;
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px;
+}
+
+.hamburger.is-current {
+  transform: translateX(rem(-200));
+}
+
+.hamburger.hamburger.is-current span:nth-child(1) {
+  top: 15px;
+  transform: rotate(-45deg);
+  background-color: $black;
+}
+
+.hamburger.hamburger.is-current span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.hamburger.is-current span:nth-child(3) {
+  top: 15px;
+  transform: rotate(45deg);
+  background-color: $black;
+}

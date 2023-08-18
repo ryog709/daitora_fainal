@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.news-items {
+  padding: rem(40) 0;
+  box-shadow: 0px 5px 12px #3e3e3e33;
+  background-color: $white;
+  @include mq("md") {
+    padding: rem(60) 0 rem(43);
+  }
+}
+
+.news__items {
+  margin-top: rem(-40);
+  @include mq("md") {
+    margin-top: initial;
+  }
+}
+
+.news-items__lists {
+  margin-top: rem(40);
+  @include mq("md") {
+    padding-left: rem(60);
+    padding-right: rem(60);
+    margin-top: rem(68);
+  }
+}
+
+.news-items__button {
+  margin-top: rem(42);
+  text-align: center;
+}

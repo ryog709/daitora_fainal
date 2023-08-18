@@ -1,42 +1,236 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="robots" content="noindex" />
-  <!-- meta情報 -->
-  <title>CodeUps</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <!-- ファビコン -->
-  <link rel="”icon”" href="" />
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./assets/js/script.js"></script>
-</head>
-<body>
-  <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex" />
+    <!-- meta情報 -->
+    <title>CodeUps</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="./assets/images/common/favicon01.ico" type="image/x-icon" />
 
-  </header>
-  <main>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
-      <p class="test">変更2</p>
-    </div>
-  </main>
-  <footer>
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  </footer>
-</body>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- font awesome -->
+    <script defer src="https://kit.fontawesome.com/346d65280e.js" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+  </head>
+  <body>
+    <header class="header js-header">
+      <div class="header__inner inner">
+        <h1 class="header__logo u-mobile">Sample&nbsp;Corp.</h1>
+        <nav class="header__nav header-nav u-desktop">
+          <ul class="header-nav__lists">
+            <li class="header-nav__list"><a href="#news">news</a></li>
+            <li class="header-nav__list"><a href="#service">service</a></li>
+            <li class="header-nav__list"><a href="#results">results</a></li>
+            <li class="header-nav__list"><a href="#price">price</a></li>
+            <li class="header-nav__list"><a href="#comments">comments</a></li>
+            <li class="header-nav__list"><a href="#FAQs">FAQs</a></li>
+            <li class="header-nav__list"><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
 
+        <div class="hamburger js-hamburger u-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="drawer-menu js-drawer u-mobile">
+        <div class="drawer-menu__wrap">
+          <div class="drawer-menu__left"></div>
+          <div class="drawer-menu__right">
+            <ul class="drawer-menu__items">
+              <li class="drawer-menu__item">
+                <a href="#news" class="drawer-menu__link">news</a>
+              </li>
+              <li class="drawer-menu__item">
+                <a href="#service" class="drawer-menu__link">service</a>
+              </li>
+              <li class="drawer-menu__item">
+                <a href="#results" class="drawer-menu__link">results</a>
+              </li>
+              <li class="drawer-menu__item">
+                <a href="#comments" class="drawer-menu__link">comments</a>
+              </li>
+              <li class="drawer-menu__item">
+                <a href="#FAQs" class="drawer-menu__link">FAQs</a>
+              </li>
+              <li class="drawer-menu__item">
+                <a href="#contact" class="drawer-menu__link">contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- mv -->
+      <section class="mv">
+        <div class="mv__inner inner">
+          <div class="mv__box">
+            <h1 class="mv__title">詩が生れて、画が出来る。<br />とかくに人の世は住みにくい。</h1>
+            <p class="mv__text">
+              どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+            </p>
+
+            <div class="mv__button">
+              <a class="primary-button" href="#">お問い合わせしてみる</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- news -->
+      <section class="news">
+        <div class="news__inner inner">
+          <div class="news__items news-items">
+            <h2 class="news-items__heading heading">news</h2>
+            <div class="news-items__lists">
+              <div class="news-items__list news-item">
+                <div class="news-item__box">
+                  <div class="news-item__unit">
+                    <time class="news-item__date" datetime="2019-02-01">2019-02-01</time>
+                    <div class="news-item__category">テキスト</div>
+                  </div>
+                  <div class="news-item__text">
+                    ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース
+                  </div>
+                </div>
+              </div>
+              <div class="news-items__list news-item">
+                <div class="news-item__box">
+                  <div class="news-item__unit">
+                    <time class="news-item__date" datetime="2019-02-01">2019-02-01</time>
+                    <div class="news-item__category">テキスト</div>
+                  </div>
+                  <div class="news-item__text">
+                    ニュースニュースニュースニュースニュースニュースニュース
+                  </div>
+                </div>
+              </div>
+              <div class="news-items__list news-item">
+                <div class="news-item__box">
+                  <div class="news-item__unit">
+                    <time class="news-item__date" datetime="2019-02-01">2019-02-01</time>
+                    <div class="news-item__category">テキスト</div>
+                  </div>
+                  <div class="news-item__text">
+                    ニュースニュースニュースニュースニュースニュースニュース
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="news-items__button">
+              <a href="#" class="monotone-button">MORE</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- service -->
+      <section class="service">
+        <div class="service__inner inner">
+          <h2 class="service-items__heading heading">service</h2>
+          <div class="service__items service-items">
+            <div class="service-items__list service-item">
+              <div class="service-item__logo service-item1">
+                <img
+                  src="./assets/images/common/service1.webp"
+                  alt="ロゴ画像"
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-item__title">web<br />design</div>
+              <div class="service-item__text">
+                どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+              </div>
+            </div>
+
+            <div class="service-items__list service-item">
+              <div class="service-item__logo service-item2">
+                <img
+                  src="./assets/images/common/service2.webp"
+                  alt="ロゴ画像"
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-item__title">web<br />coding</div>
+              <div class="service-item__text">
+                どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+              </div>
+            </div>
+
+            <div class="service-items__list service-item">
+              <div class="service-item__logo service-item3">
+                <img
+                  src="./assets/images/common/service3.webp"
+                  alt="ロゴ画像"
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                />
+              </div>
+              <div class="service-item__title">cms<br />customize</div>
+              <div class="service-item__text">
+                どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner inner">
+        <div class="footer__area1">
+          <div class="footer__sns-link">
+            <i
+              class="fa-brands fa-twitter fa-2xl"
+              data-fa-transform="shrink-6 down-5"
+              style="color: #707070"
+            ></i>
+            <i class="fa-brands fa-square-facebook fa-2xl" style="color: #707070"></i>
+          </div>
+          <div class="footer__link">
+            <p class="footer__sitemap">サイトマップ</p>
+            <p class="footer__personal">個人情報保護方針</p>
+            <p class="footer__policy">プライバシーポリシー</p>
+          </div>
+        </div>
+        <div class="footer__area2">
+          <div class="footer__logo">Sample&nbsp;Corp.</div>
+          <small class="footer__copyright"
+            >&copy;&nbsp;デイトラ&nbsp;Landing&nbsp;page&nbsp;Sample.</small
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

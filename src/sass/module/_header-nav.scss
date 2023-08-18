@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.header__nav {
+  height: inherit;
+}
+
+.header-nav__lists {
+  height: inherit;
+}
+
+.header-nav__lists {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(40);
+  font-size: rem(16);
+  font-weight: $medium;
+  letter-spacing: -0.02em;
+  line-height: calc(19 / 16);
+}
+
+.header-nav__list {
+  text-transform: capitalize;
+  height: inherit;
+}
+
+.header-nav__list a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
