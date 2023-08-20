@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.contact {
+  background-image: url(../images/common/contact-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $white;
+}
+
+.contact__block {
+  background-image: url(../images/common/contact.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact__text {
+  color: $white;
+  font-size:  rem(14);
+  font-weight: $medium;
+  line-height: calc(20 /14 );
+}

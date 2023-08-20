@@ -1,0 +1,51 @@
+@use "global" as *;
+
+//親要素にposition: relative;を当てて位置を調整
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: rem(-35);
+  left: -7px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq("md") {
+    justify-content: flex-start;
+    bottom: -66px;
+  }
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 9.4px);
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 1;
+}
+
+/* アクティブ時のバレットのスタイル */
+.swiper-pagination-bullet-active {
+  width: 20px;
+  height: 20px;
+  background: transparent; /* 透明 */
+  border: 1px solid #fff; /* 白の1pxの線で外側の丸を作る */
+  border-radius: 50%; /* 丸形に */
+  position: relative; /* 疑似要素の位置を調整するため */
+}
+
+/* アクティブ時の内側の丸を作る */
+.swiper-pagination-bullet-active::before {
+  content: ""; /* 空の内容 */
+  width: 12px;
+  height: 12px;
+  background: #fff; /* 白色 */
+  border-radius: 50%; /* 丸形に */
+  position: absolute; /* 絶対位置 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 中央に配置 */
+}

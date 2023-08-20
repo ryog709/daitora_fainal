@@ -24,6 +24,10 @@
   background: url(../images/common/news-arrow.webp) center center / cover no-repeat;
 }
 
+.news-items__heading {
+  text-align: center;
+}
+
 .news-item__box {
   max-width: rem(288);
   width: 100%;

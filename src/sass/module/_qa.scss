@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.qa {
+  background-image: url("../images/common/qa-bg.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: rem(40) 0 rem(60);
+  @include mq("md") {
+    padding: rem(66) 0 rem(120);
+  }
+}
+
+.qa__heading {
+  text-align: center;
+}

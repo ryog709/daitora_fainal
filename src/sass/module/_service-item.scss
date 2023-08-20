@@ -3,24 +3,31 @@
 .service-item {
   text-align: center;
   padding: 0 rem(16);
+  max-width: rem(400);
+  @include mq("md") {
+    width: 100%;
+    padding: 0 rem(45);
+  }
+}
 
+.service-items__list {
+  margin-inline: auto;
 }
 
 .service-item__logo {
   display: inline-block;
-  margin-top: rem(52);
+  margin-top: rem(33);
   width: rem(64);
   height: rem(64);
   @include mq("md") {
     margin-top: rem(10);
-
   }
 }
 
 .service-item__logo img {
-display: inline-block;
-text-align: center;
-vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .service-item1 img {
@@ -28,7 +35,6 @@ vertical-align: middle;
   height: rem(46);
 }
 .service-item2 img {
-  // padding-top: rem(10);
   width: rem(50);
   height: rem(34);
 }
@@ -44,9 +50,9 @@ vertical-align: middle;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   margin-top: rem(9);
-    @include mq("md") {
-      margin-top: initial;
-    }
+  @include mq("md") {
+    margin-top: initial;
+  }
 }
 
 .service-item__text {

@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.accordion {
+  max-width: rem(612);
+  width: 100%;
+  margin-left: auto;
+}
+
+.qa__accordion {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(60);
+  }
+}
+
+.accordion__list {
+  background-color: $white;
+  padding: rem(16);
+  border-radius: rem(4);
+}
+
+.accordion__list:not(:first-child) {
+  margin-top: rem(21);
+  @include mq("md") {
+    margin-top: rem(32);
+  }
+}
+
+.accordion__list-title {
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.025em;
+  position: relative;
+  display: flex;
+  padding-left: rem(40);
+}
+
+.accordion__list-title::before {
+  position: absolute;
+  content: "Q";
+  width: rem(24);
+  height: rem(24);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $white;
+  background-color: $blue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion__list-title::after {
+  position: absolute;
+  content: "";
+  width: rem(17);
+  height: rem(17);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease 0s;
+  background: url(../images/common/plus.png) center center / contain no-repeat;
+}
+
+.accordion__list-title.open::after {
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  transition: all 0.3s ease 0s;
+  background: url(../images/common/minus.png) center center / contain no-repeat;
+}
+
+.accordion__list-body {
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: calc(20 / 14);
+  padding: rem(12) rem(16);
+  background: #3b69ff33 0% 0% no-repeat padding-box;
+  border-radius: rem(4);
+  margin-top: rem(16);
+  display: none;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}

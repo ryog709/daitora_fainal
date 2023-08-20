@@ -7,8 +7,8 @@
   line-height: calc(22.5 / 18);
   padding: rem(14.8) 1em;
   background-color: $white;
-  border:  rem(1) solid $Gray2;
-  letter-spacing:  0.2em;
+  border: rem(1) solid $gray2;
+  letter-spacing: 0.2em;
   color: $black;
   max-width: rem(268);
   width: 100%;
@@ -16,7 +16,19 @@
   @include mq("md") {
     max-width: rem(236);
     width: 100%;
-    font-size:  rem(20);
+    font-size: rem(20);
     padding: rem(18.5) 1em;
-    }
+  }
+}
+
+.monotone-button.monotone-button--white {
+  background-color: $black;
+  color: $white;
+  border: rem(1) solid $white;
+  max-width: rem(350);
+  width: 100%;
+}
+
+.monotone-button.monotone-button--space {
+  letter-spacing: 0.1em;
 }
