@@ -49,3 +49,7 @@
   left: 50%;
   transform: translate(-50%, -50%); /* 中央に配置 */
 }
+
+.swiper-wrapper{
+  transition-timing-function: linear;
+}

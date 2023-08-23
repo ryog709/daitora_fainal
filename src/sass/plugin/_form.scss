@@ -5,47 +5,54 @@
   @return math.div($pixels, 16) * 1rem;
 }
 /*デフォルト色の指定*/
-$border-cr-default: #3ea1d1; //デフォルト時のボーダーの色
-$border-cr: #3ea1d1; //inputのhover or focus時の色
+$border-cr-default: #707070; //デフォルト時のボーダーの色
+$border-cr: #4973ff; //inputのhover or focus時の色
 $back-cr: #fff; //input（テキスト系）の背景色
 
 /*サイズ等の指定*/
-$fz: rem(16); //入力するときのfont-size
-$padding-und: rem(8); //paddingの指定（上下） inputの内側の余白で使う
-$padding-lnr: rem(10); //paddingの指定（左右） inputの内側の余白で使う
-$border-r: rem(2); //border-radius（テキスト系）
+$fz: rem(14); //入力するときのfont-size
+$padding-und: rem(10); //paddingの指定（上下） inputの内側の余白で使う
+$padding-und2: rem(4); //paddingの指定（上下） inputの内側の余白で使う
+$padding-lnr: rem(0); //paddingの指定（左右） inputの内側の余白で使う
+$padding-rnr: rem(10); //paddingの指定（左右） inputの内側の余白で使う
+$border-r: rem(6); //border-radius（テキスト系）
 
 /*ボタン系の指定*/
 $fz-btn: rem(14); //送信ボタンのfont-size
-$back-cr-btn: transparent linear-gradient(90deg, #7633a4 0%, #250d65 100%) 0% 0% no-repeat
-  padding-box; //ボタンの背景色
-$font-cr-btn: #3ea1d1; //ボタンのフォントカラー
-$padding-und-btn: rem(15); //paddingの指定（上下） btnの内側の余白で使う
-$padding-lnr-btn: rem(52.5); //paddingの指定（左右） btnの内側の余白で使う
-$border-r-btn: rem(50);
+// $back-cr-btn: transparent linear-gradient(90deg, #7633a4 0%, #250d65 100%) 0% 0% no-repeat
+// padding-box; //ボタンの背景色
+$back-cr-btn: #ffaa3b 0% 0% no-repeat padding-box; //ボタンの背景色
+$font-cr-btn: white; //ボタンのフォントカラー
+$padding-und-btn: rem(20); //paddingの指定（上下） btnの内側の余白で使う
+$padding-lnr-btn: rem(56); //paddingの指定（左右） btnの内側の余白で使う
+$padding-lnr-btn2: rem(52); //paddingの指定（左右） btnの内側の余白で使う
+$border-r-btn: rem(10);
 
 /*ラジオボタンの指定*/
-$radio-fz: rem(16); //フォントサイズ
-$radio-size: rem(40); //外枠の幅高さ
+$radio-fz: rem(12); //フォントサイズ
+$radio-size: rem(12); //外枠の幅高さ
 $radio-bg-cr: #fff; //外枠の背景色
 $radio-border-cr: #707070; //外枠の色
-$radio-size-inner: rem(36); //チェックマーク幅高さ
-$radio-bg-cr-inner: #3ea1d1; //チェックマークの背景色
+$radio-size-inner: rem(6); //チェックマーク幅高さ
+$radio-bg-cr-inner: #3b69ff; //チェックマークの背景色
 $radio-space: rem(10); //チェックマークと文字の距離
-$radio-space-betweenRadio: rem(25); //ラジオボタンの間の距離
+$radio-space-betweenRadio: rem(42); //ラジオボタンの間の距離
 
 /*チェックボックスの指定*/
 $check-fz: rem(14); //フォントサイズ
-$check-size: rem(20); //外枠の幅高さ
+$check-fz2: rem(16); //フォントサイズ
+$check-size: rem(18); //外枠の幅高さ
 $check-bg-cr: #fff; //外枠の背景色
-$check-border-cr: #3ea1d1; //外枠の色
-$check-bg-cr-inner: #3ea1d1; //チェックマークの背景色
+$check-border-cr: #707070; //外枠の色
+$check-bg-cr-inner: #3b69ff; //チェックマークの背景色
 $check-space: rem(5); //チェックマークと文字の距離
+$check-space2: rem(38); //チェックマークと文字の距離
 $check-space-betweenRadio: rem(20); //ラジオボタンの間の距離
-$check-weight: 1px; //チェックマークの線の太さ(px)
+$check-weight: 2px; //チェックマークの線の太さ(px)
 
 /*テキストエリアの指定*/
-$textarea-height: rem(122);
+$textarea-height: rem(160);
+$textarea-height2: rem(200);
 
 [type="text"],
 [type="search"],
@@ -53,33 +60,74 @@ $textarea-height: rem(122);
 [type="url"],
 [type="email"],
 [type="password"],
-[type="date"],
+[type="date"] {
+  /*↓リセットCSS */
+  border: none;
+  border-radius: 0;
+  opacity: 0.5;
+  background-image: none;
+  font-family: inherit;
+  /*↓カスタム */
+  margin-top: rem(0);
+  font-size: $fz;
+  padding: $padding-und $padding-lnr;
+  width: 100%;
+  max-width: rem(900);
+  background: $back-cr;
+  border-bottom: 1px solid $border-cr-default;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+  // border-radius: $border-r;
+  /*↓↓↓↓不要ならコメントアウト or 削除 */
+  &:hover {
+    border-bottom: 1px solid $border-cr;
+    box-shadow: 0 5px 5px -3px #4973ff80; // 水平方向のオフセットは0、垂直方向のオフセットは5px
+  }
+  /*↓↓選択されているときの色*/
+  &:focus {
+    border-bottom: 1px solid $border-cr;
+    box-shadow: 0 5px 5px -3px #4973ff80; // 水平方向のオフセットは0、垂直方向のオフセットは5px
+  }
+}
+
+[type="text"],
+[type="email"] {
+  padding: $padding-und2 $padding-lnr;
+  @include mq("md") {
+    padding: $padding-und2 $padding-rnr;
+  }
+}
+
 textarea {
   /*↓リセットCSS */
   border: none;
   border-radius: 0;
+  opacity: 0.5;
   background-image: none;
   font-family: inherit;
   /*↓カスタム */
-  margin-top: rem(3);
+  margin-top: rem(10);
   font-size: $fz;
-  padding: $padding-und $padding-lnr;
+  padding: $padding-und $padding-rnr;
   width: 100%;
-  max-width: rem(320);
+  max-width: rem(900);
   background: $back-cr;
-  // border: 1px solid $border-cr-default;
-  border-radius: $border-r;
-  box-shadow: 5px 6px 15px #60606029;
+  border: 1px solid $border-cr-default;
+  @include mq("md") {
+    margin-top: rem(5);
+  }
+  // border-radius: $border-r;
   /*↓↓↓↓不要ならコメントアウト or 削除 */
-  // &:hover {  //ホバーしたときの色
-  // 	border: 1px solid $border-cr;
-  // }
+  &:hover {
+    //ホバーしたときの色
+    border: 1px solid $border-cr;
+    box-shadow: 0px 0px 5px #4973ff80;
+  }
   /*↓↓選択されているときの色*/
   &:focus {
     border: 1px solid $border-cr;
-  }
-  @include mq("md") {
-    margin-top: initial;
+    box-shadow: 0px 0px 5px #4973ff80;
   }
 }
 
@@ -96,20 +144,25 @@ button,
   width: auto;
   display: inline-block;
   text-decoration: none;
-  border: 1px solid #3ea1d1;
+  border: none;
   border-radius: 0;
   /*↓カスタム */
   padding: $padding-und-btn $padding-lnr-btn;
-  background: #fff;
+  background: $back-cr-btn;
   color: $font-cr-btn;
   font-size: $fz-btn;
+  font-weight: $bold;
   cursor: pointer;
   transition: 0.3s ease;
-  // border-radius: $border-r-btn;
+  border-radius: $border-r-btn;
   line-height: 1;
+  @include mq("md") {
+    font-size: rem(18);
+    padding: $padding-und-btn $padding-lnr-btn2;
+  }
 }
 
-.radio1 [type="radio"] {
+[type="radio"] {
   display: none;
 
   + span {
@@ -123,16 +176,14 @@ button,
 
     &::before {
       position: absolute;
-      content: "法人";
-      color: #3ea1d1;
-      padding: rem(12) rem(23);
+      content: "";
       top: 50%;
       left: 0;
       transform: translateY(-50%);
       background: $radio-bg-cr;
-      // border: 1px solid $radio-border-cr;
-      // border-radius: 50%;
-      width: 80px;
+      border: 1px solid $radio-border-cr;
+      border-radius: 50%;
+      width: $radio-size;
       height: $radio-size;
       display: block;
     }
@@ -141,20 +192,29 @@ button,
       opacity: 0;
       transition: 0.3s ease;
     }
+    &:hover::before {
+      // ホバーしたときの色
+      border: 1px solid $border-cr;
+      box-shadow: 0px 0px 5px #4973ff80;
+    }
+
+    &:focus::before {
+      // 選択されているときの色
+      border: 1px solid $border-cr;
+      box-shadow: 0px 0px 5px #4973ff80;
+    }
   }
 
   &:checked + span {
     &::after {
       position: absolute;
-      content: "法人";
-      color: #fff;
-      padding: rem(10) rem(20);
+      content: "";
       top: 50%;
       left: calc(($radio-size - $radio-size-inner) / 2);
       transform: translateY(-50%);
       background: $radio-bg-cr-inner;
-      border-radius: 1px;
-      width: 76px;
+      border-radius: 50%;
+      width: $radio-size-inner;
       height: $radio-size-inner;
       display: block;
       opacity: 1;
@@ -162,57 +222,9 @@ button,
   }
 }
 
-.radio2 [type="radio"] {
-  display: none;
-
-  + span {
-    display: inline-block;
-    position: relative;
-    padding: 0 0 0 calc($radio-size + $radio-space);
-    margin: 0 $radio-space-betweenRadio 0 0;
-    font-size: $radio-fz;
-    line-height: 1;
-    cursor: pointer;
-
-    &::before {
-      position: absolute;
-      content: "個人";
-      color: #3ea1d1;
-      padding: rem(12) rem(23);
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      background: $radio-bg-cr;
-      // border: 1px solid $radio-border-cr;
-      // border-radius: 50%;
-      width: 80px;
-      height: $radio-size;
-      display: block;
-    }
-
-    &::after {
-      opacity: 0;
-      transition: 0.3s ease;
-    }
-  }
-
-  &:checked + span {
-    &::after {
-      position: absolute;
-      content: "個人";
-      color: #fff;
-      padding: rem(10) rem(20);
-      top: 50%;
-      left: calc(($radio-size - $radio-size-inner) / 2);
-      transform: translateY(-50%);
-      background: $radio-bg-cr-inner;
-      // border-radius: 50%;
-      width: 76px;
-      height: $radio-size-inner;
-      display: block;
-      opacity: 1;
-    }
-  }
+[type="radio"]:checked + span::before {
+  // クリック（選択）されたときの背景色
+  background-color: #4973ff33;
 }
 
 [type="checkbox"] {
@@ -221,15 +233,16 @@ button,
   + span {
     display: inline-block;
     position: relative;
-    padding: 0 0 0 calc($check-size + $check-space);
+    padding: 0 0 0 $check-space2;
     margin: 0 $check-space-betweenRadio 0 0;
-    font-size: $check-fz;
+    font-size: $check-fz2;
     line-height: 1;
     cursor: pointer;
     transition: 0.3s ease;
-      @include mq("md") {
-        font-size:  rem(16);
-      }
+    font-weight: $bold;
+    @include mq("md") {
+      font-size: rem(18);
+    }
 
     &::before {
       position: absolute;
@@ -248,53 +261,35 @@ button,
       opacity: 0;
       transition: 0.3s ease;
     }
-  }
 
-  &:checked + span {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      display: block;
-      opacity: 1;
-      transform: rotate(45deg);
-      border: none;
-      transition: 0.3s ease;
+    &:hover::before {
+      // ホバーしたときの色
+      border: 1px solid $border-cr;
+      box-shadow: 0px 0px 5px #4973ff80;
+    }
+
+    &:focus::before {
+      // 選択されているときの色
+      border: 1px solid $border-cr;
+      box-shadow: 0px 0px 5px #4973ff80;
     }
   }
 
   &:checked + span {
-    &::before {
+    &::after {
       content: "";
       position: absolute;
       top: 50%;
       left: 0;
       display: block;
       opacity: 1;
-      transform: rotate(45deg);
-      border: none;
-      transition: 0.3s ease;
-    }
-  }
-
-  &:checked + span {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      display: block;
-      opacity: 1;
-      border: none;
-      transition: 0.3s ease;
       /*チェックマークじゃない場合は以下を変更する*/
-      transform: translateY(-50%) rotate(45deg);
-      width: calc($check-size * 0.5);
-      height: calc($check-size * 0.9);
+      transform: translate(8%, -50%) rotate(-45deg);
+      width: calc($check-size * 0.8);
+      height: calc($check-size * 0.4);
       margin-top: -0.1em;
       margin-left: 0.1em;
-      border-right: $check-weight solid $check-bg-cr-inner;
+      border-left: $check-weight solid $check-bg-cr-inner;
       border-bottom: $check-weight solid $check-bg-cr-inner;
     }
   }
@@ -309,20 +304,30 @@ select {
   cursor: pointer;
   width: 100%;
   /*↓カスタム */
+  @include mq("md") {
+    margin-top: rem(0);
+    max-width: rem(178);
+    width: 100%;
+  }
   margin-top: rem(10);
   font-size: $fz;
-  padding: $padding-und $padding-lnr;
+  padding: $padding-und $padding-rnr;
   background-color: $back-cr;
   border: 1px solid $border-cr-default;
-  border-radius: $border-r;
+  // border-radius: $border-r;
   /*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
   appearance: auto;
   /*↓デフォルトではないアイコンを使う場合は入力する*/
   // background-image: url();
   // background-position: right 12px center;
   // background-repeat: no-repeat;
+  &:hover {
+    box-shadow: 0px 0px 5px #4973ff80;
+    border: 1px solid #707070;
+  }
   &:focus {
-    border: 1px solid $border-cr;
+    box-shadow: 0px 0px 5px #4973ff80;
+    border: 1px solid #707070;
   }
 }
 
@@ -349,5 +354,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 textarea {
   height: $textarea-height;
   width: 100%;
-  max-width: rem(600);
+  @include mq("md") {
+    height: $textarea-height2;
+  }
 }

@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.contact-form {
+  @include mq("md") {
+    max-width: rem(720);
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+.contact-form__dl:not(:first-child) {
+  margin-top: rem(30);
+}
+
+.contact-form__block1 {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(22);
+  }
+}
+
+.contact-form__block2 {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(34);
+  }
+}
+
+.contact__form dt {
+  font-weight: $bold;
+}
+
+.contact__name label {
+  position: relative;
+}
+
+.contact__name label::after {
+  position: absolute;
+  content: "必須";
+  color: $white;
+  background-color: $red;
+  font-size: rem(12);
+  font-weight: $bold;
+  line-height: 1;
+  padding: rem(2) rem(0);
+  margin-left: rem(12);
+  top: 0;
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+.contact-form__dl {
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: rem(188) 1fr;
+    align-items: center;
+  }
+}
+
+.contact-form__block1 {
+  @include mq("md") {
+  }
+}
+
+.contact-form__button {
+  width: calc(100% - 5%);
+  margin-inline: auto;
+  text-align: center;
+  margin-top: rem(23);
+  @include mq("md") {
+    width: 100%;
+    text-align: left;
+    margin-top: rem(35);
+  }
+}
+
+.submit-button.enabled {
+  background-color: $gray; /* 色反転後の色を指定 */
+  color: $white;
+}

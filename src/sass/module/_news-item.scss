@@ -9,6 +9,11 @@
   }
 }
 
+.news-item:hover {
+  background-color: #4973FF1A;
+  // cursor: pointer;
+}
+
 .news-item:first-child {
   border-top: rem(1) solid $lightGray2;
 }
@@ -68,6 +73,7 @@
   border-radius: 50px;
   padding: rem(1.5) rem(14);
   margin-left: rem(20);
+  background-color: $white;
   @include mq("md") {
     margin-left: rem(36);
     font-size: rem(14);

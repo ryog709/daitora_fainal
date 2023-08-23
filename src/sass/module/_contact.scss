@@ -5,7 +5,21 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: $white;
+  font-family: $font-jp;
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  @include mq("md") {
+    padding-top: rem(60);
+    padding-bottom: rem(55);
+  }
+}
+
+.contact__container {
+  max-width: rem(960);
+  width: 100%;
+  margin-inline: auto;
+  border-radius: rem(12);
+  overflow: hidden;
 }
 
 .contact__block {
@@ -13,11 +27,33 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: rem(40) rem(16);
+  @include mq("md") {
+    padding: rem(60) rem(16);
+  }
+}
+
+.contact__heading {
+  text-align: center;
+  font-family: $font-en;
 }
 
 .contact__text {
   color: $white;
-  font-size:  rem(14);
+  font-size: rem(14);
   font-weight: $medium;
-  line-height: calc(20 /14 );
+  line-height: calc(20 / 14);
+  padding-top: rem(12);
+  @include mq("md") {
+    text-align: center;
+    font-size: rem(16);
+  }
+}
+
+.contact__form {
+  background-color: $white;
+  padding: rem(30) rem(12);
+  @include mq("md") {
+    padding: rem(60) rem(12);
+  }
 }

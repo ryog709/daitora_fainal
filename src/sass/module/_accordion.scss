@@ -17,6 +17,7 @@
   background-color: $white;
   padding: rem(16);
   border-radius: rem(4);
+  cursor: pointer;
 }
 
 .accordion__list:not(:first-child) {

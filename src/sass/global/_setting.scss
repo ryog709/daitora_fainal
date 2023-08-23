@@ -13,14 +13,15 @@ $padding-sp: 16px;
 // フォント設定
 ////////////////////
 ///
-$base-font: 'Montserrat', YuGothic,'Yu Gothic',sans-serif;
-$font-jp: YuGothic,'Yu Gothic',sans-serif;
-$font-en: 'Montserrat', sans-serif;
+$base-font: "Montserrat", YuGothic, "Yu Gothic", sans-serif;
+$font-jp: YuGothic, "Yu Gothic", sans-serif;
+$font-en: "Montserrat", sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
   font-family: $base-font;
-  color: #3E3E3E;
+  color: #3e3e3e;
+  background-color: #e3e3e3;
 }
 
 // フォントウェイト
@@ -34,14 +35,14 @@ $bold: 700;
 ////////////////////
 
 //色指定（共通性のあるものは出来る限り指定すると良い）
-$black: #3E3E3E;
-$white: #FFFFFF;
-$whiteGray: #E3E3E3;
-$lightGray: #F3F3F3;
-$lightGray2: #CECDCD;
-$gray: #B2B2B2;
+$black: #3e3e3e;
+$white: #ffffff;
+$whiteGray: #e3e3e3;
+$lightGray: #f3f3f3;
+$lightGray2: #cecdcd;
+$gray: #b2b2b2;
 $gray2: #707070;
-$orange: #FFAA3B;
-$orange2: #F18900;
-$blue: #4973FF;
-$red: #FF4646;
+$orange: #ffaa3b;
+$orange2: #f18900;
+$blue: #4973ff;
+$red: #ff4646;

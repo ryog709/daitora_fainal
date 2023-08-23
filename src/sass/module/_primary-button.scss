@@ -13,10 +13,16 @@
   max-width: rem(222);
   width: 100%;
   text-align: center;
+  transition: all 0.5s ease 0s;
   @include mq("md") {
     max-width: rem(282);
     width: 100%;
     font-size:  rem(18);
     padding: rem(11.5) 1em;
     }
+}
+
+.primary-button:hover {
+  background-color: #F18900;
+  transition: all 0.3s ease 0s;
 }

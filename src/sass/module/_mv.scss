@@ -7,10 +7,16 @@
   background-position: 22%;
   height: rem(667);
   padding-top: rem(225);
+  transition: all 0.7s ease 0s; /* スライドのアニメーション */
   @include mq("md") {
     background-position: center;
     height: rem(648);
   }
+}
+
+.mv.is-current {
+  /* 他のスタイル */
+  transform: translateX(-80%); /* スライドさせる位置 */
 }
 
 .mv__inner {

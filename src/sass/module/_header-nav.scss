@@ -29,4 +29,24 @@
   height: inherit;
   display: flex;
   align-items: center;
+  position: relative;
 }
+
+.header-nav__list a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: rem(1);
+  background: $black;
+  bottom: rem(25);
+  left: 0;
+  transition: all 0.3s ease 0s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+.header-nav__list a:hover::after {
+  transform: scale(1.2);
+  opacity: 0.3;
+}
+

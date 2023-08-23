@@ -1,17 +1,18 @@
 @use "global" as *;
 
-.footer {
+.footer.max-inner {
   background: $black;
   height: rem(395);
   color: $white;
   padding: rem(55) 0;
+  position: relative;
   @include mq("md") {
     height: rem(292);
   }
 }
 
 .footer__inner.inner {
-  max-width: rem(960);
+  max-width: rem(1010);
   width: 100%;
   margin-inline: auto;
   @include mq("md") {
@@ -26,12 +27,17 @@
   gap: rem(50);
   @include mq("md") {
     justify-content: flex-start;
+    gap: rem(28);
   }
 }
 
-.footer__sns-link i {
-  width: rem(36);
-  height: rem(36);
+.fa__middle {
+  font-size: 2.5em;
+  line-height: 1;
+}
+
+.fa__large {
+  font-size: 2.7em;
   line-height: 1;
 }
 
@@ -47,8 +53,10 @@
   font-weight: $medium;
   line-height: calc(26 / 14);
   letter-spacing: 0.025em;
+  margin-top: rem(40);
   @include mq("md") {
     font-size: rem(16);
+    margin-top: rem(30);
   }
 }
 
@@ -57,21 +65,20 @@
   margin-top: rem(32);
   line-height: 1;
   @include mq("md") {
-    margin-top: initial;
+    margin-top: rem(10);
     text-align: right;
   }
 }
 
-.footer__link {
-  margin-top: rem(35);
-}
-
 .footer__personal {
   margin-top: rem(20);
+  @include mq("md") {
+    margin-top: rem(11);
+  }
 }
 
 .footer__policy {
-  margin-top: rem(20);
+  margin-top: rem(12);
 }
 
 .footer__logo {
@@ -83,14 +90,32 @@
   }
 }
 
-
 .footer__copyright {
   display: inline-block;
   font-size: rem(12);
   letter-spacing: 0.025em;
   font-weight: $regular;
-  margin-top: rem(12);
+  margin-top: rem(20);
   @include mq("md") {
-    margin-top: rem(10);
+    margin-top: rem(20);
   }
+}
+
+.to-top {
+  position: absolute;
+  bottom: rem(13);
+  right: rem(16);
+  @include mq("md") {
+    bottom: rem(40);
+    right: rem(40);
+  }
+}
+
+.footer__sns-link a:hover,
+.footer__sitemap:hover,
+.footer__personal:hover,
+.footer__policy:hover,
+.footer__logo:hover,
+.footer__copyright:hover {
+  opacity: 0.7;
 }

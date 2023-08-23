@@ -14,6 +14,15 @@
   }
 }
 
+
+.header.menu-open {
+  background-color: transparent;
+}
+
+.header.menu-open .header__logo {
+  display: none;
+}
+
 .header__inner {
   height: inherit;
 }
@@ -24,4 +33,11 @@
   font-weight: $semibold;
   display: flex;
   align-items: center;
+}
+
+
+/* スクロールしたらヘッダーメニューのフォントカラー変更 */
+.header.headerColorScroll {
+  background-color: $whiteGray;
+  transition: all 0.5s ease 0s;
 }
