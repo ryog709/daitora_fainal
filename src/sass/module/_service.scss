@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .service {
-  background: linear-gradient(180deg, $black 0%, $black 55%, $white 55%, $white 100%);
+  background: linear-gradient(180deg, $black 0%, $black 55%, $lightGray 55%, $lightGray 100%);
   padding: rem(40) 0 rem(60);
     @include mq("md") {
       padding: rem(60) 0 rem(120);

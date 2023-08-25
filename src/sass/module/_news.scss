@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .news {
-  background-color: $white;
+  background-color: $lightGray;
   padding-bottom: rem(60);
     @include mq("md") {
       padding: rem(120) 0;

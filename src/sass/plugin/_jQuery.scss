@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.fadeIn {
+  transform: translate3d(0, rem(100), 0);
+  transition: 2s;
+  opacity: 0;
+}
+.fadeIn.animated {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}

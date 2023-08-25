@@ -1,0 +1,23 @@
+@use "global" as *;
+
+/*アニメーションの下準備*/
+.header{
+  transform: translateY(-100%);
+}
+.js-textAnimation{
+  overflow: hidden;
+}
+.js-textAnimation span{
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.opening__mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,1);
+  z-index: 1;
+}

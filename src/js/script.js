@@ -41,6 +41,7 @@ jQuery(function ($) {
   //画面幅に応じたカード型レイアウトスライダー
   const swiper = new Swiper(".swiper", {
     autoplay: true,
+    speed: 5000,
     loop: true,
     pagination: {
       el: ".swiper-pagination",
@@ -92,35 +93,6 @@ jQuery(function ($) {
     });
   });
 
-  // {コンタクトフォーム必須項目入力処理
-  $(document).ready(function () {
-    function checkRequired() {
-      let allFilled = true;
-      $(".required").each(function () {
-        if ($(this).attr("type") === "checkbox") {
-          if (!$(this).prop("checked")) {
-            allFilled = false;
-            return false; // ループを抜ける
-          }
-        } else {
-          if ($(this).val() === "") {
-            allFilled = false;
-            return false; // ループを抜ける
-          }
-        }
-      });
-      return allFilled;
-    }
-
-    $(".required").on("input", function () {
-      if (checkRequired()) {
-        $(".submit-button").addClass("enabled");
-      } else {
-        $(".submit-button").removeClass("enabled");
-      }
-    });
-  });
-
   // トップへ戻るボタン
   $(function () {
     $(window).scroll(function () {
@@ -139,6 +111,112 @@ jQuery(function ($) {
         },
         500
       ); // スクロールにかかる時間を指定する
+      return false;
+    });
+  });
+
+  // gsapアニメーション
+  const openingTL = gsap.timeline();
+  openingTL
+    .to(".opening__mask", {
+      //幕が開く
+      y: "-100%",
+      duration: 2,
+      ease: "power4.inOut",
+    })
+    .to(
+      ".mv",
+      {
+        //背景画像が元の大きさへ戻る
+        "--scale": 1,
+        duration: 3,
+        ease: "power4.out",
+      },
+      "<"
+    )
+    .to(
+      ".js-textAnimation span",
+      {
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: { each: 0.15 },
+      },
+      "-=.5"
+    )
+    .to(".header", { y: 0, duration: 1, ease: "power3.out" }, "-=1");
+
+
+  jQuery(function ($) {
+    $(window).on("load scroll", function () {
+      var box = $(".fadeIn");
+      var animated = "animated";
+
+      box.each(function () {
+        var boxOffset = $(this).offset().top;
+        var scrollPos = $(window).scrollTop();
+        var wh = $(window).height();
+
+        if (scrollPos > boxOffset - wh + 100) {
+          $(this).addClass(animated);
+        }
+      });
+    });
+  });
+
+  $(document).ready(function () {
+    let $form = $("#js-form"); // フォームの変数を定義
+
+    function checkRequired() {
+      let allFilled = true;
+      $(".required").each(function () {
+        if ($(this).attr("type") === "checkbox") {
+          if (!$(this).prop("checked")) {
+            allFilled = false;
+            return false; // ループを抜ける
+          }
+        } else {
+          if ($(this).val() === "") {
+            allFilled = false;
+            return false; // ループを抜ける
+          }
+        }
+      });
+      return allFilled;
+    }
+
+    // GoogleForm 送信ボタン無効化と必須入力後色反転
+    $(".required").on("input", function () {
+      if (checkRequired()) {
+        $(".submit-button").addClass("enabled");
+        $(".submit-button").prop("disabled", false); // 送信ボタンを有効にする
+      } else {
+        $(".submit-button").removeClass("enabled");
+        $(".submit-button").prop("disabled", true); // 送信ボタンを無効にする
+      }
+    });
+
+    $form.submit(function (e) {
+      if (!checkRequired()) {
+        return false; // 必須項目が空白なら送信を中止
+      }
+      $form.find("input[type=submit]").prop("disabled", true); // 送信ボタンを無効にする
+      $.ajax({
+        url: $form.attr("action"),
+        data: $form.serialize(),
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+          0: function () {
+            $form.find("input[type=submit]").prop("disabled", false); // 送信ボタンを有効にする
+            $("#js-success").slideDown();
+          },
+          200: function () {
+            $form.find("input[type=submit]").prop("disabled", false); // 送信ボタンを有効にする
+            $("#js-error").slideDown();
+          },
+        },
+      });
       return false;
     });
   });

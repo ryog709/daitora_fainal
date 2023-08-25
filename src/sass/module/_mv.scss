@@ -1,17 +1,36 @@
 @use "global" as *;
 
 .mv {
-  background-image: url(../images/common/mv-bg.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 22%;
   height: rem(667);
   padding-top: rem(225);
   transition: all 0.7s ease 0s; /* スライドのアニメーション */
+  position: relative;
+  overflow: hidden;
+  --scale:0;
   @include mq("md") {
     background-position: center;
     height: rem(648);
   }
+}
+
+.mv::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/common/mv-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 22%;
+  transform: scale(var(--scale)); /* 拡大効果 */
 }
 
 .mv.is-current {
@@ -27,8 +46,11 @@
 }
 
 .mv__box {
+  position: absolute;
+  z-index: 10;
+  width: 91.466667%;
   @include mq("md") {
-    width: 50%;
+    width: 46.875%;
   }
 }
 
@@ -61,4 +83,10 @@
     text-align: left;
     margin-top: rem(37);
   }
+}
+
+.mv__button span {
+  display: inline-block;
+  max-width: rem(300);
+  width: 100%;
 }

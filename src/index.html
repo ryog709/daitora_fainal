@@ -41,6 +41,7 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"
     ></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
@@ -96,22 +97,28 @@
     <main>
       <!-- mv -->
       <section id="mv" class="mv max-inner">
+        <span class="opening__mask"></span>
         <div class="mv__inner inner">
           <div class="mv__box">
-            <h1 class="mv__title">詩が生れて、画が出来る。<br />とかくに人の世は住みにくい。</h1>
-            <p class="mv__text">
-              どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
+            <h1 class="mv__title js-textAnimation">
+              <span>詩が生れて、画が出来る。<br />とかくに人の世は住みにくい。</span>
+            </h1>
+            <p class="mv__text js-textAnimation">
+              <span
+                >どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</span
+              >
             </p>
 
-            <div class="mv__button">
-              <a class="primary-button" href="#">お問い合わせしてみる</a>
+            <div class="mv__button js-textAnimation">
+              <span>
+                <a class="primary-button" href="#">お問い合わせしてみる</a>
+              </span>
             </div>
           </div>
         </div>
       </section>
-
       <!-- news -->
-      <section id="news" class="news max-inner">
+      <section id="news" class="news max-inner fadeIn">
         <div class="news__inner inner">
           <div class="news__items news-items">
             <h2 class="news-items__heading heading">news</h2>
@@ -164,7 +171,7 @@
       </section>
 
       <!-- service -->
-      <section id="service" class="service max-inner">
+      <section id="service" class="service max-inner fadeIn">
         <div class="service__inner inner">
           <h2 class="service-items__heading heading heading--white">service</h2>
           <div class="service__items service-items">
@@ -220,7 +227,7 @@
       </section>
 
       <!-- results -->
-      <div class="max-inner">
+      <div class="max-inner max-inner--bg fadeIn">
         <section id="results" class="results results__left">
           <h2 class="results__heading heading heading--white">results</h2>
           <div class="results__inner">
@@ -364,7 +371,7 @@
         </section>
       </div>
       <!-- price -->
-      <section id="price" class="price max-inner">
+      <section id="price" class="price max-inner fadeIn">
         <div class="price__inner inner">
           <h2 class="price__heading heading">price</h2>
           <table class="price__table">
@@ -434,7 +441,7 @@
       </section>
 
       <!-- qa -->
-      <section id="FAQs" class="qa max-inner">
+      <section id="FAQs" class="qa max-inner fadeIn">
         <div class="qa__inner inner">
           <h2 class="qa__heading heading">q&a</h2>
 
@@ -482,7 +489,7 @@
       </section>
 
       <!-- access -->
-      <section id="access" class="access max-inner">
+      <section id="access" class="access max-inner fadeIn">
         <div class="access__inner inner">
           <div class="access__contents">
             <h2 class="access__heading heading heading--white">access</h2>
@@ -512,7 +519,7 @@
       <div class="access__layout max-inner"></div>
 
       <!-- contact -->
-      <section id="contact" class="contact max-inner">
+      <section id="contact" class="contact max-inner fadeIn">
         <div class="contact__inner inner">
           <div class="contact__container">
             <div class="contact__block">
@@ -520,16 +527,27 @@
               <p class="contact__text">
                 どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。
               </p>
+              <div id="js-success" class="contact-form__massage">
+                <p>送信完了しました。ありがとうございました。</p>
+              </div>
+              <div id="js-error" class="contact-form__massage contact-form__massage--error">
+                <p>送信に失敗しました。ページを更新して再度送信してください。</p>
+              </div>
             </div>
 
             <div class="contact__form">
-              <form class="contact-form" action="#" method="post" id="">
+              <form
+                class="contact-form"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfZ7D9lCKjQwYIA4v6gWZ1UCoCi2PToupzP2M7UDAo2cTNJLQ/formResponse"
+                method="post"
+                id="js-form"
+              >
                 <dl class="contact-form__dl">
                   <dt class="contact-form__dt">
                     <label for="inquiry-type">お問い合わせ種別</label>
                   </dt>
                   <dd class="contact-form__dd">
-                    <select name="hoge" class="required" id="inquiry-type">
+                    <select name="entry.1448701136" class="required" id="inquiry-type">
                       <option value="">選択してください</option>
                       <option value="セレクト1">セレクト1</option>
                       <option value="セレクト2">セレクト2</option>
@@ -542,7 +560,13 @@
                     <label for="name">氏名</label>
                   </dt>
                   <dd class="contact-form__dd">
-                    <input type="text" name="company" placeholder="氏名" class="required" id="name" />
+                    <input
+                      type="text"
+                      name="entry.627895887"
+                      placeholder="氏名"
+                      class="required"
+                      id="name"
+                    />
                   </dd>
                 </dl>
                 <dl class="contact-form__dl">
@@ -550,7 +574,13 @@
                     <label for="furigana">フリガナ</label>
                   </dt>
                   <dd class="contact-form__dd">
-                    <input type="text" name="company" placeholder="フリガナ" class="required" id="furigana" />
+                    <input
+                      type="text"
+                      name="entry.181673218"
+                      placeholder="フリガナ"
+                      class="required"
+                      id="furigana"
+                    />
                   </dd>
                 </dl>
 
@@ -561,7 +591,7 @@
                   <dd class="contact-form__dd">
                     <input
                       type="email"
-                      name="mail_address"
+                      name="emailAddress"
                       placeholder="sample@gmail.com"
                       class="validate[]"
                       id="mail_address"
@@ -573,12 +603,12 @@
                   <dt class="contact-form__dt">性別</dt>
                   <dd class="contact-form__radio">
                     <label
-                      ><input type="radio" name="target" value="ラジオボタン" checked /><span
+                      ><input type="radio" name="entry.293122393" value="男性" checked /><span
                         >男性</span
                       ></label
                     >
                     <label
-                      ><input type="radio" name="target" value="ラジオボタン2" /><span
+                      ><input type="radio" name="entry.293122393" value="女性" /><span
                         >女性</span
                       ></label
                     >
@@ -590,7 +620,7 @@
                     <label for="contents">メッセージ</label>
                   </dt>
                   <dd class="contact-form__dd">
-                    <textarea name="contents" id="contents"></textarea>
+                    <textarea name="entry.124582632" id="contents"></textarea>
                   </dd>
                 </dl>
 
@@ -598,9 +628,13 @@
                   <dt class="contact-form__dt"></dt>
                   <dd class="contact-form__checkbox">
                     <label
-                      ><input type="checkbox" name="hoge" class="required" value="チェックボックス1" checked /><span
-                        >個人情報保護方針に同意する</span
-                      ></label
+                      ><input
+                        type="checkbox"
+                        name="entry.520085529"
+                        class="required"
+                        value="プライバシーポリシーの同意"
+                        checked
+                      /><span>個人情報保護方針に同意する</span></label
                     >
                   </dd>
                 </dl>

@@ -23,14 +23,20 @@
 }
 
 .contact__block {
-  background-image: url(../images/common/contact.webp);
+  background-image: url(../images/common/contact-sp.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: rem(40) rem(16);
+  position: relative;
   @include mq("md") {
+    background-image: url(../images/common/contact.webp);
     padding: rem(60) rem(16);
   }
+}
+
+.contact__block::after {
+
 }
 
 .contact__heading {
