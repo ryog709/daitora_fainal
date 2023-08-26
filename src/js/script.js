@@ -135,7 +135,7 @@ jQuery(function ($) {
       "<"
     )
     .to(
-      ".js-textAnimation span",
+      ".js-textAnimation h1,.js-textAnimation span",
       {
         y: 0,
         duration: 1.2,

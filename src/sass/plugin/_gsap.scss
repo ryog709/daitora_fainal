@@ -7,9 +7,10 @@
 .js-textAnimation{
   overflow: hidden;
 }
-.js-textAnimation span{
+.js-textAnimation h1,
+.js-textAnimation span {
   display: inline-block;
-  transform: translateY(100%);
+  transform: translateY(105%);
 }
 
 .opening__mask{
