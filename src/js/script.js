@@ -59,7 +59,7 @@ jQuery(function ($) {
     let paddingLeft;
 
     if (width <= 375) {
-      slidesPerView = 1.23;
+      slidesPerView = 1.285;
       spaceBetween = 20;
     } else if (width >= 1280) {
       slidesPerView = 2.8;
@@ -67,7 +67,7 @@ jQuery(function ($) {
     } else {
       // 375px〜1280pxの範囲で線形補間
       const t = (width - 375) / (1280 - 375);
-      slidesPerView = 1.23 + (2.8 - 1.23) * t;
+      slidesPerView = 1.29 + (2.8 - 1.29) * t;
       spaceBetween = 20 + (40 - 20) * t;
     }
 
