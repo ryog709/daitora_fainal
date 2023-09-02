@@ -11,6 +11,7 @@
 
 .news-item:hover {
   background-color: #4973ff1a;
+  transition: all 0.7s ease 0s;
 }
 
 .news-item:first-child {
@@ -47,9 +48,10 @@
 }
 
 .news-item__unit {
+  display: flex;
+  align-items: center;
   @include mq("md") {
     flex: 0 0 27%;
-    display: flex;
   }
 }
 
@@ -57,7 +59,7 @@
   display: inline-block;
   font-size: rem(14);
   font-weight: $regular;
-  line-height: calc(20 / 14);
+  line-height: 1;
   letter-spacing: 0.025em;
   @include mq("md") {
     font-size: rem(18);
@@ -68,7 +70,7 @@
   display: inline-block;
   font-size: rem(12);
   font-weight: $medium;
-  line-height: 1.1;
+  line-height: 1;
   letter-spacing: 0.025em;
   border: 2px solid $blue;
   border-radius: 50px;

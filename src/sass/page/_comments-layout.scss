@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.comments-layout {
+  margin-top: rem(114);
+  @include mq("md") {
+    margin-top: rem(260);
+  }
+}
+
+

@@ -8,12 +8,6 @@
   }
 }
 
-.results__left {
-  @include mq("md") {
-    margin-left: rem(40);
-  }
-}
-
 .results__heading {
   text-align: center;
   @include mq("md") {

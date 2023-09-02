@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.news-layout {
+  @include mq("md") {
+    margin-top: rem(120);
+  }
+}

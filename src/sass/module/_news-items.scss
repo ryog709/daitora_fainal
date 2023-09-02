@@ -16,12 +16,17 @@
   }
 }
 
-.news-items__lists {
+.news-items__wrap {
   margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(68);
+  }
+}
+
+.news-items__list {
   @include mq("md") {
     padding-left: rem(60);
     padding-right: rem(60);
-    margin-top: rem(68);
   }
 }
 

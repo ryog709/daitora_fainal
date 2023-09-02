@@ -4,35 +4,32 @@
   height: inherit;
 }
 
-.header-nav__lists {
-  height: inherit;
-}
-
-.header-nav__lists {
+.header-nav__items {
   height: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: rem(40);
+  // gap: rem(40);
   font-size: rem(16);
   font-weight: $medium;
   letter-spacing: -0.02em;
   line-height: calc(19 / 16);
 }
 
-.header-nav__list {
+.header-nav__item {
   text-transform: capitalize;
   height: inherit;
 }
 
-.header-nav__list a {
+.header-nav__item a {
   height: inherit;
+  padding: 0 rem(20);
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.header-nav__list a::after {
+.header-nav__item a::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -45,8 +42,7 @@
   transform-origin: center top;
 }
 
-.header-nav__list a:hover::after {
-  transform: scale(1.2);
-  opacity: 0.3;
+.header-nav__item a:hover::after {
+  transform: scale(0.7);
+  opacity: 0.7;
 }
-

@@ -1,11 +1,10 @@
 @use "global" as *;
 
-.footer.max-inner {
+.footer {
   background: $black;
   height: rem(395);
   color: $white;
   padding: rem(55) 0;
-  position: relative;
   @include mq("md") {
     height: rem(292);
   }
@@ -41,7 +40,7 @@
   line-height: 1;
 }
 
-.footer__area1 {
+.footer__left {
   text-align: center;
   @include mq("md") {
     text-align: left;
@@ -60,7 +59,7 @@
   }
 }
 
-.footer__area2 {
+.footer__right {
   text-align: center;
   margin-top: rem(32);
   line-height: 1;
@@ -101,21 +100,6 @@
   }
 }
 
-.to-top {
-  position: absolute;
-  bottom: rem(13);
-  right: rem(16);
-  @include mq("md") {
-    bottom: rem(40);
-    right: rem(40);
-  }
-}
-
-.to-top img {
-  width: rem(50);
-  height: rem(50);
-}
-
 .footer__sns-link a:hover,
 .footer__sitemap:hover,
 .footer__personal:hover,
@@ -123,4 +107,5 @@
 .footer__logo:hover,
 .footer__copyright:hover {
   opacity: 0.7;
+  transition: all 0.5s ease 0s;
 }

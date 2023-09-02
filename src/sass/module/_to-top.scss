@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.to-top {
+  position: fixed;
+  bottom: rem(13);
+  right: rem(16);
+  cursor: pointer;
+  @include mq("md") {
+    bottom: rem(40);
+    right: rem(40);
+  }
+}
+
+.to-top img {
+  width: rem(50);
+  height: rem(50);
+}

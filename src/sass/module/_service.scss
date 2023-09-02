@@ -2,9 +2,9 @@
 
 .service {
   background: linear-gradient(180deg, $black 0%, $black 55%, $lightGray 55%, $lightGray 100%);
-  padding: rem(40) 0 rem(60);
+  padding-top: rem(40);
     @include mq("md") {
-      padding: rem(60) 0 rem(120);
+      padding-top: rem(60);
     }
 }
 

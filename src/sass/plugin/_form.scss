@@ -83,6 +83,7 @@ $textarea-height2: rem(200);
   &:hover {
     border-bottom: 1px solid $border-cr;
     box-shadow: 0 5px 5px -3px #4973ff80; // 水平方向のオフセットは0、垂直方向のオフセットは5px
+    transition: all 0.5s ease 0s;
   }
   /*↓↓選択されているときの色*/
   &:focus {
@@ -123,6 +124,7 @@ textarea {
     //ホバーしたときの色
     border: 1px solid $border-cr;
     box-shadow: 0px 0px 5px #4973ff80;
+    transition: all 0.5s ease 0s;
   }
   /*↓↓選択されているときの色*/
   &:focus {
@@ -156,6 +158,10 @@ button,
   transition: 0.3s ease;
   border-radius: $border-r-btn;
   line-height: 1;
+  &:hover {
+    opacity: 0.7;
+    transition: all 0.5s ease 0s;
+  }
   @include mq("md") {
     font-size: rem(18);
     padding: $padding-und-btn $padding-lnr-btn2;
@@ -266,6 +272,7 @@ button,
       // ホバーしたときの色
       border: 1px solid $border-cr;
       box-shadow: 0px 0px 5px #4973ff80;
+      transition: all 0.5s ease 0s;
     }
 
     &:focus::before {
@@ -324,6 +331,7 @@ select {
   &:hover {
     box-shadow: 0px 0px 5px #4973ff80;
     border: 1px solid #707070;
+    transition: all 0.5s ease 0s;
   }
   &:focus {
     box-shadow: 0px 0px 5px #4973ff80;

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.results-layout {
+  margin-top: rem(60);
+  @include mq("md") {
+    margin-top: rem(120);
+  }
+
+}
+
+.results-layout__left {
+  @include mq("md") {
+    margin-left: rem(40);
+    margin-top: rem(120);
+  }
+}

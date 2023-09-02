@@ -2,10 +2,8 @@
 
 .comments {
   background-color: $black;
-  height: rem(425);
-  position: relative;
+  padding-top: rem(0.1);
   @include mq("md") {
-    height: rem(576);
     background: linear-gradient(
       90deg,
       $black 0%,
@@ -18,14 +16,13 @@
 
 .comments__inner {
   display: flex;
-  position: absolute;
-  top: 37%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: rem(-60);
   align-items: center;
-    @include mq("md") {
-      top: 27%;
-    }
+  padding-bottom: rem(60);
+  @include mq("md") {
+    margin-top: rem(-148);
+    padding-bottom: rem(160);
+  }
 }
 
 .comments__heading.heading {
@@ -36,19 +33,13 @@
   background-color: $white;
   padding: rem(40) rem(20);
   box-shadow: 0px 0px 10px #00000029;
-  max-width: rem(450);
+  max-width: rem(600);
   width: 100%;
   margin-inline: auto;
   @include mq("md") {
     width: calc(666 / 1200) * 100%;
     max-width: 100%;
     padding: rem(120) rem(60);
-  }
-}
-
-.comments__wrapper2 {
-  @include mq("md") {
-    width: calc(534 / 1200) * 100%;
   }
 }
 
@@ -65,10 +56,13 @@
 }
 
 .comments__photo {
-  aspect-ratio: 534/444;
+  @include mq("md") {
+    width: calc(534 / 1200) * 100%;
+  }
 }
 
 .comments__photo img {
+  aspect-ratio: 534/444;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -76,9 +70,11 @@
 
 .comments__img {
   aspect-ratio: 100/100;
+  overflow: hidden;
 }
 
 .comments__img img {
+  border-radius: 50%;
   object-fit: cover;
   width: 100%;
   height: 100%;

@@ -7,7 +7,7 @@
 .js-textAnimation{
   overflow: hidden;
 }
-.js-textAnimation h1,
+.js-textAnimation h2,
 .js-textAnimation span {
   display: inline-block;
   transform: translateY(105%);
@@ -20,5 +20,5 @@
   top: 0;
   left: 0;
   background-color: rgba(0,0,0,1);
-  z-index: 1;
+  z-index: 10;
 }

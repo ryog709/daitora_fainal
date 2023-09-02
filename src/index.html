@@ -45,25 +45,25 @@
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
-    <header class="header js-header max-inner">
+    <header class="header header-layout js-header">
       <div class="header__inner inner">
-        <div class="header__logo u-mobile">Sample&nbsp;Corp.</div>
+        <h1 class="header__logo u-mobile">Sample&nbsp;Corp.</h1>
         <nav class="header__nav header-nav u-desktop">
-          <ul class="header-nav__lists">
-            <li class="header-nav__list"><a href="#news">news</a></li>
-            <li class="header-nav__list"><a href="#service">service</a></li>
-            <li class="header-nav__list"><a href="#results">results</a></li>
-            <li class="header-nav__list"><a href="#price">price</a></li>
-            <li class="header-nav__list"><a href="#comments">comments</a></li>
-            <li class="header-nav__list"><a href="#FAQs">FAQs</a></li>
-            <li class="header-nav__list"><a href="#contact">contact</a></li>
+          <ul class="header-nav__items">
+            <li class="header-nav__item"><a href="#news">news</a></li>
+            <li class="header-nav__item"><a href="#service">service</a></li>
+            <li class="header-nav__item"><a href="#results">results</a></li>
+            <li class="header-nav__item"><a href="#price">price</a></li>
+            <li class="header-nav__item"><a href="#comments">comments</a></li>
+            <li class="header-nav__item"><a href="#FAQs">FAQs</a></li>
+            <li class="header-nav__item"><a href="#contact">contact</a></li>
           </ul>
         </nav>
-        <div class="hamburger js-hamburger u-mobile"></div>
+        <div class="header__hamburger hamburger js-hamburger u-mobile"></div>
       </div>
 
       <!-- ドロワーメニュー -->
-      <div class="drawer-menu js-drawer u-mobile">
+      <div class="header__drawer-menu drawer-menu js-drawer u-mobile">
         <div class="drawer-menu__wrap">
           <div class="drawer-menu__left"></div>
           <div class="drawer-menu__right">
@@ -78,7 +78,7 @@
                 <a href="#results" class="drawer-menu__link">results</a>
               </li>
               <li class="drawer-menu__item">
-                <a href="#results" class="drawer-menu__link">price</a>
+                <a href="#price" class="drawer-menu__link">price</a>
               </li>
               <li class="drawer-menu__item">
                 <a href="#comments" class="drawer-menu__link">comments</a>
@@ -96,12 +96,12 @@
     </header>
     <main>
       <!-- mv -->
-      <section id="mv" class="mv max-inner">
-        <span class="opening__mask"></span>
+      <section class="mv mv-layout js-mv">
+        <span class="mv__opening__mask opening__mask js-opening__mask"></span>
         <div class="mv__inner inner">
           <div class="mv__box">
             <div class="mv__textAnimation js-textAnimation">
-              <h1 class="mv__title">詩が生れて、画が出来る。<br />とかくに人の世は住みにくい。</h1>
+              <h2 class="mv__title">詩が生れて、画が出来る。<br />とかくに人の世は住みにくい。</h2>
             </div>
             <p class="mv__text js-textAnimation">
               <span
@@ -117,50 +117,59 @@
         </div>
       </section>
       <!-- news -->
-      <section id="news" class="news max-inner fadeIn">
+      <section class="news news-layout fadeIn">
         <div class="news__inner inner">
           <div class="news__items news-items">
             <h2 class="news-items__heading heading">news</h2>
-            <div class="news-items__lists">
-              <a href="#">
-                <div class="news-items__list news-item">
-                  <div class="news-item__box">
-                    <div class="news-item__unit">
-                      <time class="news-item__date" datetime="2019-02-01">2019-02-01</time>
-                      <div class="news-item__category">テキスト</div>
+
+            <div class="news-items__wrap">
+              <ul class="news-items__list">
+                <li class="news-items__item news-item">
+                  <a href="">
+                    <div class="news-item__box">
+                      <div class="news-item__unit">
+                        <time class="news-item__date" datetime="2019-02-01">2019-02-01</time>
+                        <div class="news-item__category">テキスト</div>
+                      </div>
+                      <div class="news-item__text">
+                        ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース
+                      </div>
                     </div>
-                    <div class="news-item__text">
-                      ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="news-items__list">
+                <li class="news-items__item news-item">
+                  <a href="">
+                    <div class="news-item__box">
+                      <div class="news-item__unit">
+                        <time class="news-item__date" datetime="2019-02-01">2019-02-01</time>
+                        <div class="news-item__category">テキスト</div>
+                      </div>
+                      <div class="news-item__text">
+                        ニュースニュースニュースニュースニュースニュースニュース
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </a>
-              <a href="#">
-                <div class="news-items__list news-item">
-                  <div class="news-item__box">
-                    <div class="news-item__unit">
-                      <time class="news-item__date" datetime="2019-02-01">2019-02-01</time>
-                      <div class="news-item__category">テキスト</div>
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="news-items__list">
+                <li class="news-items__item news-item">
+                  <a href="">
+                    <div class="news-item__box">
+                      <div class="news-item__unit">
+                        <time class="news-item__date" datetime="2019-02-01">2019-02-01</time>
+                        <div class="news-item__category">テキスト</div>
+                      </div>
+                      <div class="news-item__text">
+                        ニュースニュースニュースニュースニュースニュースニュース
+                      </div>
                     </div>
-                    <div class="news-item__text">
-                      ニュースニュースニュースニュースニュースニュースニュース
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="#">
-                <div class="news-items__list news-item">
-                  <div class="news-item__box">
-                    <div class="news-item__unit">
-                      <time class="news-item__date" datetime="2019-02-01">2019-02-01</time>
-                      <div class="news-item__category">テキスト</div>
-                    </div>
-                    <div class="news-item__text">
-                      ニュースニュースニュースニュースニュースニュースニュース
-                    </div>
-                  </div>
-                </div>
-              </a>
+                  </a>
+                </li>
+              </ul>
             </div>
             <div class="news-items__button">
               <a href="#" class="monotone-button">MORE</a>
@@ -170,7 +179,7 @@
       </section>
 
       <!-- service -->
-      <section id="service" class="service max-inner fadeIn">
+      <section class="service service-layout fadeIn">
         <div class="service__inner inner">
           <h2 class="service-items__heading heading heading--white">service</h2>
           <div class="service__items service-items">
@@ -178,7 +187,7 @@
               <div class="service-item__logo service-item1">
                 <img
                   src="./assets/images/common/service1.webp"
-                  alt="ロゴ画像"
+                  alt="web design"
                   width="64"
                   height="64"
                   loading="lazy"
@@ -194,7 +203,7 @@
               <div class="service-item__logo service-item2">
                 <img
                   src="./assets/images/common/service2.webp"
-                  alt="ロゴ画像"
+                  alt="web coding"
                   width="64"
                   height="64"
                   loading="lazy"
@@ -210,7 +219,7 @@
               <div class="service-item__logo service-item3">
                 <img
                   src="./assets/images/common/service3.webp"
-                  alt="ロゴ画像"
+                  alt="cms customize"
                   width="64"
                   height="64"
                   loading="lazy"
@@ -226,165 +235,163 @@
       </section>
 
       <!-- results -->
-      <div class="max-inner max-inner--bg fadeIn">
-        <section id="results" class="results results__left">
-          <h2 class="results__heading heading heading--white">results</h2>
-          <div class="results__inner">
-            <div class="results__cards results-cards">
-              <div class="swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="results__card results-card">
-                      <a href="#">
-                        <div class="results-card__img">
-                          <img
-                            src="./assets/images/common/slide1.webp"
-                            alt="PC画像"
-                            width="400"
-                            height="250"
-                            loading="lazy"
-                          />
+      <section class="results results-layout results-layout__left fadeIn">
+        <h2 class="results__heading heading heading--white">results</h2>
+        <div class="results__inner">
+          <div class="results__cards results-cards">
+            <div class="results-cards__swiper swiper js-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="results__card results-card">
+                    <a href="#" class="results-card__link">
+                      <div class="results-card__img">
+                        <img
+                          src="./assets/images/common/slide1.webp"
+                          alt="とかくに人の世は住みにくい。"
+                          width="400"
+                          height="250"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="results-card__body">
+                        <div class="results-card__title">とかくに人の世は住みにくい。</div>
+                        <div class="results-card__text">
+                          どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
                         </div>
-                        <div class="results-card__body">
-                          <div class="results-card__title">とかくに人の世は住みにくい。</div>
-                          <div class="results-card__text">
-                            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
-                          </div>
-                        </div>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="results__card results-card">
-                      <a href="#">
-                        <div class="results-card__img">
-                          <img
-                            src="./assets/images/common/slide1.webp"
-                            alt="PC画像"
-                            width="400"
-                            height="250"
-                            loading="lazy"
-                          />
+                </div>
+                <div class="swiper-slide">
+                  <div class="results__card results-card">
+                    <a href="#" class="results-card__link">
+                      <div class="results-card__img">
+                        <img
+                          src="./assets/images/common/slide1.webp"
+                          alt="とかくに人の世は住みにくい。"
+                          width="400"
+                          height="250"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="results-card__body">
+                        <div class="results-card__title">とかくに人の世は住みにくい。</div>
+                        <div class="results-card__text">
+                          どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
                         </div>
-                        <div class="results-card__body">
-                          <div class="results-card__title">とかくに人の世は住みにくい。</div>
-                          <div class="results-card__text">
-                            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
-                          </div>
-                        </div>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="results__card results-card">
-                      <a href="#">
-                        <div class="results-card__img">
-                          <img
-                            src="./assets/images/common/slide1.webp"
-                            alt="PC画像"
-                            width="400"
-                            height="250"
-                            loading="lazy"
-                          />
+                </div>
+                <div class="swiper-slide">
+                  <div class="results__card results-card">
+                    <a href="#" class="results-card__link">
+                      <div class="results-card__img">
+                        <img
+                          src="./assets/images/common/slide1.webp"
+                          alt="とかくに人の世は住みにくい。"
+                          width="400"
+                          height="250"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="results-card__body">
+                        <div class="results-card__title">とかくに人の世は住みにくい。</div>
+                        <div class="results-card__text">
+                          どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
                         </div>
-                        <div class="results-card__body">
-                          <div class="results-card__title">とかくに人の世は住みにくい。</div>
-                          <div class="results-card__text">
-                            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
-                          </div>
-                        </div>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="results__card results-card">
-                      <a href="#">
-                        <div class="results-card__img">
-                          <img
-                            src="./assets/images/common/slide1.webp"
-                            alt="PC画像"
-                            width="400"
-                            height="250"
-                            loading="lazy"
-                          />
+                </div>
+                <div class="swiper-slide">
+                  <div class="results__card results-card">
+                    <a href="#" class="results-card__link">
+                      <div class="results-card__img">
+                        <img
+                          src="./assets/images/common/slide1.webp"
+                          alt="とかくに人の世は住みにくい。"
+                          width="400"
+                          height="250"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="results-card__body">
+                        <div class="results-card__title">とかくに人の世は住みにくい。</div>
+                        <div class="results-card__text">
+                          どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
                         </div>
-                        <div class="results-card__body">
-                          <div class="results-card__title">とかくに人の世は住みにくい。</div>
-                          <div class="results-card__text">
-                            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
-                          </div>
-                        </div>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="results__card results-card">
-                      <a href="#">
-                        <div class="results-card__img">
-                          <img
-                            src="./assets/images/common/slide1.webp"
-                            alt="PC画像"
-                            width="400"
-                            height="250"
-                            loading="lazy"
-                          />
+                </div>
+                <div class="swiper-slide">
+                  <div class="results__card results-card">
+                    <a href="#" class="results-card__link">
+                      <div class="results-card__img">
+                        <img
+                          src="./assets/images/common/slide1.webp"
+                          alt="とかくに人の世は住みにくい。"
+                          width="400"
+                          height="250"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="results-card__body">
+                        <div class="results-card__title">とかくに人の世は住みにくい。</div>
+                        <div class="results-card__text">
+                          どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
                         </div>
-                        <div class="results-card__body">
-                          <div class="results-card__title">とかくに人の世は住みにくい。</div>
-                          <div class="results-card__text">
-                            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
-                          </div>
-                        </div>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="results__card results-card">
-                      <a href="#">
-                        <div class="results-card__img">
-                          <img
-                            src="./assets/images/common/slide1.webp"
-                            alt="PC画像"
-                            width="400"
-                            height="250"
-                            loading="lazy"
-                          />
+                </div>
+                <div class="swiper-slide">
+                  <div class="results__card results-card">
+                    <a href="#" class="results-card__link">
+                      <div class="results-card__img">
+                        <img
+                          src="./assets/images/common/slide1.webp"
+                          alt="とかくに人の世は住みにくい。"
+                          width="400"
+                          height="250"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="results-card__body">
+                        <div class="results-card__title">とかくに人の世は住みにくい。</div>
+                        <div class="results-card__text">
+                          どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
                         </div>
-                        <div class="results-card__body">
-                          <div class="results-card__title">とかくに人の世は住みにくい。</div>
-                          <div class="results-card__text">
-                            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。
-                          </div>
-                        </div>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination js-results-pagination"></div>
             </div>
+            <div class="swiper-pagination js-results-pagination"></div>
           </div>
-          <div class="results-card__button">
-            <a href="#" class="monotone-button monotone-button--white">VIEW ALL</a>
-          </div>
-        </section>
-      </div>
+        </div>
+        <div class="results-card__button">
+          <a href="#" class="monotone-button monotone-button--white">VIEW ALL</a>
+        </div>
+      </section>
       <!-- price -->
-      <section id="price" class="price max-inner fadeIn">
+      <section class="price price-layout fadeIn">
         <div class="price__inner inner">
           <h2 class="price__heading heading">price</h2>
           <table class="price__table">
-            <tr>
-              <th>row&nbsp;1</th>
-              <td>Price&nbsp;¥10,000</td>
+            <tr class="price__tr">
+              <th class="price__th">row&nbsp;1</th>
+              <td class="price__td">Price&nbsp;¥10,000</td>
             </tr>
-            <tr>
-              <th>row&nbsp;2</th>
-              <td>Price&nbsp;¥10,000</td>
+            <tr class="price__tr">
+              <th class="price__th">row&nbsp;2</th>
+              <td class="price__td">Price&nbsp;¥10,000</td>
             </tr>
-            <tr>
-              <th>row&nbsp;3</th>
-              <td>Price&nbsp;¥10,000</td>
+            <tr class="price__tr">
+              <th class="price__th">row&nbsp;3</th>
+              <td class="price__td">Price&nbsp;¥10,000</td>
             </tr>
           </table>
           <p class="price__text">※ 上記料金はサンプルです。</p>
@@ -392,7 +399,7 @@
       </section>
 
       <!-- comments -->
-      <section id="comments" class="comments max-inner">
+      <section class="comments comments-layout">
         <div class="comments__inner inner">
           <div class="comments__wrapper">
             <h2 class="comments__heading heading">comments</h2>
@@ -425,22 +432,21 @@
               </p>
             </div>
           </div>
-          <div class="comments__wrapper2 u-desktop">
-            <div class="comments__photo">
-              <img
-                src="./assets/images/common/comments03.webp"
-                alt="写真"
-                width="534"
-                height="444"
-                loading="lazy"
-              />
-            </div>
+
+          <div class="comments__photo u-desktop">
+            <img
+              src="./assets/images/common/comments03.webp"
+              alt="男性と女性4人組の写真"
+              width="534"
+              height="444"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
 
       <!-- qa -->
-      <section id="FAQs" class="qa max-inner fadeIn">
+      <section class="qa qa-layout fadeIn">
         <div class="qa__inner inner">
           <h2 class="qa__heading heading">q&a</h2>
 
@@ -488,7 +494,7 @@
       </section>
 
       <!-- access -->
-      <section id="access" class="access max-inner fadeIn">
+      <section class="access access-layout fadeIn">
         <div class="access__inner inner">
           <div class="access__contents">
             <h2 class="access__heading heading heading--white">access</h2>
@@ -515,10 +521,8 @@
           </div>
         </div>
       </section>
-      <div class="access__layout max-inner"></div>
-
       <!-- contact -->
-      <section id="contact" class="contact max-inner fadeIn">
+      <section class="contact contact-layout fadeIn">
         <div class="contact__inner inner">
           <div class="contact__container">
             <div class="contact__block">
@@ -632,7 +636,6 @@
                         name="entry.520085529"
                         class="required"
                         value="プライバシーポリシーの同意"
-                        checked
                       /><span>個人情報保護方針に同意する</span></label
                     >
                   </dd>
@@ -647,18 +650,18 @@
         </div>
       </section>
     </main>
-    <footer class="footer max-inner">
+    <footer class="footer footer-layout">
       <div class="footer__inner inner">
-        <div class="footer__area1">
+        <div class="footer__left">
           <div class="footer__sns-link">
-            <a href="#" aria-label="sns-link">
+            <a href="#" target="_blank" rel="noopener" aria-label="sns-link">
               <i
                 class="fa-brands fa-twitter fa__middle"
                 data-fa-transform="shrink-6 down-5"
                 style="color: #707070"
               ></i>
             </a>
-            <a href="#" aria-label="sns-link">
+            <a href="#" target="_blank" rel="noopener" aria-label="sns-link">
               <i class="fa-brands fa-square-facebook fa__large" style="color: #707070"></i>
             </a>
           </div>
@@ -674,7 +677,7 @@
             </a>
           </div>
         </div>
-        <div class="footer__area2">
+        <div class="footer__right">
           <a href="#">
             <div class="footer__logo">Sample&nbsp;Corp.</div>
           </a>
@@ -682,16 +685,16 @@
             >&copy;&nbsp;デイトラ&nbsp;Landing&nbsp;page&nbsp;Sample.</small
           >
         </div>
-        <span class="to-top">
-          <img
-            src="./assets/images/common/totop.webp"
-            alt="トップへ戻るボタン"
-            width="50"
-            height="50"
-            loading="lazy"
-          />
-        </span>
       </div>
     </footer>
+    <div class="to-top">
+      <img
+        src="./assets/images/common/totop.webp"
+        alt="トップへ戻るボタン"
+        width="50"
+        height="50"
+        loading="lazy"
+      />
+    </div>
   </body>
 </html>

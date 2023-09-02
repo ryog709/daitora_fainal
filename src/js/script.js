@@ -4,7 +4,7 @@ jQuery(function ($) {
   // スクロールするとロゴの色変更
   $(function () {
     $(window).on("scroll", function () {
-      const sliderHeight = $(".mv").height();
+      const sliderHeight = $(".js-mv").height();
       if (sliderHeight - 30 < $(this).scrollTop()) {
         $(".js-header").addClass("headerColorScroll");
       } else {
@@ -15,11 +15,11 @@ jQuery(function ($) {
 
   // ハンバーガーメニュー
   $(function () {
-    $(".js-hamburger,.mv,.js-drawer,.js-drawer a").click(function () {
+    $(".js-hamburger,.js-mv,.js-drawer,.js-drawer a").click(function () {
       if ($(window).width() <= 767) {
         // 画面幅が767px以下の場合のみ処理を実行
-        $(".js-hamburger,.mv, .js-drawer").toggleClass("is-current");
-        $(".header").toggleClass("menu-open"); // ヘッダーにクラスを追加・削除
+        $(".js-hamburger,.js-mv, .js-drawer").toggleClass("is-current");
+        $(".js-header").toggleClass("menu-open"); // ヘッダーにクラスを追加・削除
       }
     });
   });
@@ -30,7 +30,7 @@ jQuery(function ($) {
     $('a[href^="#"]').click(function () {
       const speed = 600;
       let href = $(this).attr("href");
-      let target = $(href == "#" || href == "" ? "html" : href);
+      let target = $(href == ".results" || href == "" ? "html" : href);
       // ヘッダーの高さ分下げる
       let position = target.offset().top - headerHeight;
       $("body,html").animate({ scrollTop: position }, speed, "swing");
@@ -39,7 +39,7 @@ jQuery(function ($) {
   });
 
   //画面幅に応じたカード型レイアウトスライダー
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".js-swiper", {
     autoplay: true,
     speed: 5000,
     loop: true,
@@ -118,7 +118,7 @@ jQuery(function ($) {
   // gsapアニメーション
   const openingTL = gsap.timeline();
   openingTL
-    .to(".opening__mask", {
+    .to(".js-opening__mask", {
       //幕が開く
       y: "-100%",
       duration: 2,
@@ -135,7 +135,7 @@ jQuery(function ($) {
       "<"
     )
     .to(
-      ".js-textAnimation h1,.js-textAnimation span",
+      ".js-textAnimation h2,.js-textAnimation span",
       {
         y: 0,
         duration: 1.2,
@@ -144,7 +144,7 @@ jQuery(function ($) {
       },
       "-=.5"
     )
-    .to(".header", { y: 0, duration: 1, ease: "power3.out" }, "-=1");
+    .to(".js-header", { y: 0, duration: 1, ease: "power3.out" }, "-=1");
 
 
   jQuery(function ($) {

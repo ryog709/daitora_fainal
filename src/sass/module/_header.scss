@@ -2,10 +2,6 @@
 
 .header {
   height: rem(68);
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   background-color: $white;
   z-index: 9999;
   @include mq("md") {
@@ -13,7 +9,6 @@
     background-color: rgba(255, 255, 255, 0.1);
   }
 }
-
 
 .header.menu-open {
   background-color: transparent;
@@ -34,7 +29,6 @@
   display: flex;
   align-items: center;
 }
-
 
 /* スクロールしたらヘッダーメニューのフォントカラー変更 */
 .header.headerColorScroll {
